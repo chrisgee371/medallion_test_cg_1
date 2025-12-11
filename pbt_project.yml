@@ -1,0 +1,235 @@
+name: medallion_test_cg_1
+description: ''
+version: 0.0.1
+author: gee.chris@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: medalliontestcg1
+  parentArtefactID: geechrisprophecyioteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2025-12-05 14:47:20'
+pipelines:
+  pipelines/medallion_test_cg_1:
+    name: medallion_test_cg_1
+    description: ''
+    author: gee.chris@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-12-05 14:47:20'
+    datasets:
+      inputs:
+      - datasets/demos_bronze_customers_json
+      - datasets/demos_bronze_orders_csv
+      outputs:
+      - datasets/silver_output
+    subgraphs: []
+    dependencies: {}
+  pipelines/medallion_test_cg_3:
+    name: medallion_test_cg_3
+    description: ''
+    author: gee.chris@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-12-11 09:49:15'
+    datasets:
+      inputs:
+      - datasets/bronze_retail_events
+      outputs:
+      - datasets/silver_retail_events
+    subgraphs: []
+    dependencies: {}
+  pipelines/medallion_test_cg_4:
+    name: medallion_test_cg_4
+    description: ''
+    author: gee.chris@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-12-11 10:13:32'
+    datasets:
+      inputs:
+      - datasets/silver_retail_events
+      outputs:
+      - datasets/gold_retail_events
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/demos_bronze_orders_csv:
+    name: demos_bronze_orders_csv
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-05 15:05:47'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-05 15:05:47'
+  datasets/demos_bronze_customers_json:
+    name: demos_bronze_customers_json
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-05 15:08:18'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-05 15:08:18'
+  datasets/demos_bronze_pre_call_records:
+    name: demos_bronze_pre_call_records
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-05 15:08:30'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-05 15:08:30'
+  datasets/demos_bronze_products_csv:
+    name: demos_bronze_products_csv
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-05 15:09:05'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-05 15:09:05'
+  datasets/demos_silver_customers:
+    name: demos_silver_customers
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-05 15:09:45'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-05 15:09:45'
+  datasets/silver_output:
+    name: silver_output
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-05 16:05:10'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-05 16:05:10'
+  datasets/bronze_retail_events:
+    name: bronze_retail_events
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-11 09:53:15'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-11 09:53:15'
+  datasets/silver_retail_events:
+    name: silver_retail_events
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-11 10:02:09'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-11 10:02:09'
+  datasets/gold_retail_events:
+    name: gold_retail_events
+    description: ''
+    author: gee.chris@prophecy.io
+    createdAt: '2025-12-11 12:44:26'
+    mode: batch
+    physicalDatasets:
+      cg_databricks_test_fabric:
+        fabricId: 35322
+        datasetType: Database
+        description: ''
+        author: gee.chris@prophecy.io
+        createdAt: '2025-12-11 12:44:26'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-12-05 14:47:20'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- modifiedAt: '2025-12-05T14:47:20.645037Z'
+  name: plibMaven
+  version: 8.14.0
+  id: '1684156137'
+  createdAt: '2025-12-05T14:47:20.645037Z'
+  type: plibMaven
+- modifiedAt: '2025-12-05T14:47:20.645037Z'
+  name: plibPypi
+  version: 2.1.5
+  id: '1036144584'
+  createdAt: '2025-12-05T14:47:20.645037Z'
+  type: plibPypi
+projectDependencies:
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.10
+    isDefault: true
+    author: null
+    createdAt: '2025-12-05 14:46:51'
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.53
+    isDefault: true
+    author: null
+    createdAt: '2025-12-05 14:46:51'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
+projectConfigurations: {}

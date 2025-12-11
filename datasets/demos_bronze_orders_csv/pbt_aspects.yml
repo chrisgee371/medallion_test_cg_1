@@ -1,0 +1,54 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: order_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each order placed by a customer.
+      mappings: []
+      tags: []
+  - name: customer_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the customer who placed the order.
+      mappings: []
+      tags: []
+  - name: product_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the product purchased in the order.
+      mappings: []
+      tags: []
+  - name: quantity
+    type: integer
+    nullable: true
+    metadata:
+      description: Number of units of the product purchased in the order.
+      mappings: []
+      tags: []
+  - name: amount
+    type: double
+    nullable: true
+    metadata:
+      description: Total monetary value of the order for the specified product and
+        quantity.
+      mappings: []
+      tags: []
+  - name: order_ts
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Timestamp when the order was placed.
+      mappings: []
+      tags: []
+  - name: src_file
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the source file from which the order data was loaded.
+      mappings: []
+      tags: []

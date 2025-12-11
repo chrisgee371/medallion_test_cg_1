@@ -1,0 +1,790 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.14.0",
+        "pyPiVersion" : "2.1.5"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/medallion_test_cg_3",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "medallion_test_cg_3",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "35322",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "geechrisprophecyioteam.medalliontestcg1.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "medallion_test_cg_3",
+    "configTopLevelPackage" : "medallion_test_cg_3",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "l-7RB6EvbPZdyYHZTOjqU",
+    "source" : "oan_rgljePZ_IIbkb1uSD$$_EcCJyUduJJtqZZDC83Th",
+    "sourcePort" : "0peHv8pxTd5pwExuQP7I4$$zZB8dwiNPnuu29pfk6ncX",
+    "target" : "LcTU6UN5-p1hKA9fmFnT_$$zHGUfE_0hE3Jln_qrg-ZT",
+    "targetPort" : "yx2DDEyNqadN7U3m4D-Rl$$799Et7CUIoMuFdHSfEwN7"
+  }, {
+    "id" : "M33jqBfxasD71w9wtYKQE$$9seKmQS-AYKEgoHJ9P2Ja",
+    "source" : "LcTU6UN5-p1hKA9fmFnT_$$zHGUfE_0hE3Jln_qrg-ZT",
+    "sourcePort" : "7QAx8t0RO2IQsFeCtfe1g$$avPcVXuHWXLgUOcqmaBos",
+    "target" : "ONUvP3KNzZvBtD2eohmKl$$fd18E-akohlrJOAAAAC2m",
+    "targetPort" : "vNU8ZJE00WIUE1dIeVz0U$$6cnlJtznY0hGk8G0bWkVw"
+  } ],
+  "processes" : {
+    "oan_rgljePZ_IIbkb1uSD$$_EcCJyUduJJtqZZDC83Th" : {
+      "id" : "oan_rgljePZ_IIbkb1uSD$$_EcCJyUduJJtqZZDC83Th",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze_retail_events",
+        "slug" : "bronze_retail_events",
+        "x" : -1340,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0peHv8pxTd5pwExuQP7I4$$zZB8dwiNPnuu29pfk6ncX",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze_retail_events"
+      }
+    },
+    "LcTU6UN5-p1hKA9fmFnT_$$zHGUfE_0hE3Jln_qrg-ZT" : {
+      "id" : "LcTU6UN5-p1hKA9fmFnT_$$zHGUfE_0hE3Jln_qrg-ZT",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "completed_status_filter",
+        "slug" : "completed_status_filter",
+        "x" : -1140,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Filters transactions to include only those that are completed and made in US dollars.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yx2DDEyNqadN7U3m4D-Rl$$799Et7CUIoMuFdHSfEwN7",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ingest_date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the event data was loaded into the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ingest_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Exact timestamp when the event data was ingested.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the file from which the event data was sourced.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "row_in_file",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Row number of the event within the source file.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the event.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_ts_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Original timestamp when the event occurred, as captured from the source.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Original order identifier as received from the source system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Original customer identifier as provided in the source data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Original product identifier as recorded in the source data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "store_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Original store identifier from the source system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "channel_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Sales channel through which the transaction was made.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the transaction took place.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the transaction occurred.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of units purchased in the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit_price_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Price per unit of the product sold in the transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "discount_pct_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Discount percentage applied to the transaction as originally recorded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "currency_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Currency used in the transaction as captured in the raw data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "payment_method_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Payment method chosen by the customer in the original transaction record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "status_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current state of the transaction as recorded in the raw data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "notes_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Additional remarks or comments related to the transaction as captured in the raw data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "raw_payload",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Complete unprocessed data received for the transaction, often in JSON or text format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "7QAx8t0RO2IQsFeCtfe1g$$avPcVXuHWXLgUOcqmaBos",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ingest_date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ingest_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "row_in_file",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_ts_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "store_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "channel_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit_price_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "discount_pct_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "currency_raw",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "payment_method_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "status_raw",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "notes_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "raw_payload",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "yx2DDEyNqadN7U3m4D-Rl$$799Et7CUIoMuFdHSfEwN7##currency_raw", "yx2DDEyNqadN7U3m4D-Rl$$799Et7CUIoMuFdHSfEwN7##status_raw" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "status_raw = 'completed' and currency_raw = 'USD'"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "ONUvP3KNzZvBtD2eohmKl$$fd18E-akohlrJOAAAAC2m" : {
+      "id" : "ONUvP3KNzZvBtD2eohmKl$$fd18E-akohlrJOAAAAC2m",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "silver_retail_events",
+        "slug" : "silver_retail_events",
+        "x" : -940,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vNU8ZJE00WIUE1dIeVz0U$$6cnlJtznY0hGk8G0bWkVw",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ingest_date",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ingest_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "row_in_file",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_ts_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "store_id_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "channel_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit_price_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "discount_pct_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "currency_raw",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "payment_method_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "status_raw",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "notes_raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "raw_payload",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/silver_retail_events"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

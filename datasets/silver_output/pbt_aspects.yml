@@ -1,0 +1,82 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: order_id
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: customer_id
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: product_id
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: quantity
+    type: integer
+    nullable: true
+    metadata:
+      description: Number of units of the product purchased in the order.
+      mappings: []
+      tags: []
+  - name: amount
+    type: double
+    nullable: true
+    metadata:
+      description: Total monetary value of the order for the specified product and
+        quantity.
+      mappings: []
+      tags: []
+  - name: order_ts
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Timestamp when the order was placed.
+      mappings: []
+      tags: []
+  - name: src_file
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: email
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: country
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: status
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ts
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

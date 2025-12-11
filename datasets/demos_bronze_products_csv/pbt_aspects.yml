@@ -1,0 +1,47 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: product_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier assigned to each product.
+      mappings: []
+      tags: []
+  - name: product_name
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the product as listed in the catalog.
+      mappings: []
+      tags: []
+  - name: category
+    type: string
+    nullable: true
+    metadata:
+      description: Product category indicating the type or group the product belongs
+        to.
+      mappings: []
+      tags: []
+  - name: price
+    type: double
+    nullable: true
+    metadata:
+      description: Selling price of the product.
+      mappings: []
+      tags: []
+  - name: active
+    type: boolean
+    nullable: true
+    metadata:
+      description: Indicates whether the product is currently available for sale.
+      mappings: []
+      tags: []
+  - name: src_file
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the source file from which the product data was imported.
+      mappings: []
+      tags: []

@@ -1,0 +1,964 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.14.0",
+        "pyPiVersion" : "2.1.5"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/medallion_test_cg_1",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "medallion_test_cg_1",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "35322",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "geechrisprophecyioteam.medalliontestcg1.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "medallion_test_cg_1",
+    "configTopLevelPackage" : "medallion_test_cg_1",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "0BXm6Pazvf30z3uSbOeVr",
+    "source" : "fxs4iy0EEgIDD_qEmM7vr$$7_q3jqoaUHatpGr91uvdI",
+    "sourcePort" : "BAgtWSQxF1vJGux7f46f_$$AFj1oJBE9-HS0cnlMPXL9",
+    "target" : "xDWg5k1HUgLwTFVD50n1A$$rfeMll4wc1DziKr0qvOPf",
+    "targetPort" : "1D0UVLnLk1m523cWljRft$$SaDh0QcuvQtd7TufVHRTZ"
+  }, {
+    "id" : "xLQTypWmqs39X6xLkTvHd",
+    "source" : "xDWg5k1HUgLwTFVD50n1A$$rfeMll4wc1DziKr0qvOPf",
+    "sourcePort" : "In1DidmCaIddRwrvbFb8t$$00Zo1CKJ_ttUrplIHFOEC",
+    "target" : "2zQxtRUMgttbUykxfcygn$$Cjk0S2pBT8T9ZNx8UMjmw",
+    "targetPort" : "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b"
+  }, {
+    "id" : "9sAtbOVu2kTDy8RAM9Dyl",
+    "source" : "j3NHDZuhLV7G2MNqc3OAM$$4KQvWIZHDRT2Wybx9eabE",
+    "sourcePort" : "FKMywXWZY0OBOJ4sZb32e$$s50p_mW9KfQXgs92n15G9",
+    "target" : "2zQxtRUMgttbUykxfcygn$$Cjk0S2pBT8T9ZNx8UMjmw",
+    "targetPort" : "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs"
+  }, {
+    "id" : "CfTdap2TCsjg_oXpQKKvs$$W6pJDWfOmAmxPbA7I1wmw",
+    "source" : "2zQxtRUMgttbUykxfcygn$$Cjk0S2pBT8T9ZNx8UMjmw",
+    "sourcePort" : "5BT4wDuhsSwF9DNMOMSnB$$xxmmakyNF5sBuwdouf_Ua",
+    "target" : "tNNaazpetqAPdTjXkV1K9$$ct44A05Jnci2crgm3XaFo",
+    "targetPort" : "sIFHUCq33W4CY6mPWoK_p$$bQwNxRYb3NEY5vURhkZf4"
+  }, {
+    "id" : "is6_4bD25-00WAhytnUE8",
+    "source" : "tNNaazpetqAPdTjXkV1K9$$ct44A05Jnci2crgm3XaFo",
+    "sourcePort" : "0b1Y5dK21qR0jOEW41bv1$$hls82XYZITNKg6yA2IRqJ",
+    "target" : "5PlWDFpRU9kKjX3yJfGHU$$MGm6XQd8wmK9-aZNiixNN",
+    "targetPort" : "lWVwPBG1gUPcjs-P74fOA$$6b6cpNwvGTbdt7bnXxLoW"
+  } ],
+  "processes" : {
+    "fxs4iy0EEgIDD_qEmM7vr$$7_q3jqoaUHatpGr91uvdI" : {
+      "id" : "fxs4iy0EEgIDD_qEmM7vr$$7_q3jqoaUHatpGr91uvdI",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "demos_bronze_orders_csv",
+        "slug" : "demos_bronze_orders_csv",
+        "x" : -660,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "BAgtWSQxF1vJGux7f46f_$$AFj1oJBE9-HS0cnlMPXL9",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/demos_bronze_orders_csv"
+      }
+    },
+    "j3NHDZuhLV7G2MNqc3OAM$$4KQvWIZHDRT2Wybx9eabE" : {
+      "id" : "j3NHDZuhLV7G2MNqc3OAM$$4KQvWIZHDRT2Wybx9eabE",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "demos_bronze_customers_json",
+        "slug" : "demos_bronze_customers_json",
+        "x" : -660,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "FKMywXWZY0OBOJ4sZb32e$$s50p_mW9KfQXgs92n15G9",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/demos_bronze_customers_json"
+      }
+    },
+    "xDWg5k1HUgLwTFVD50n1A$$rfeMll4wc1DziKr0qvOPf" : {
+      "id" : "xDWg5k1HUgLwTFVD50n1A$$rfeMll4wc1DziKr0qvOPf",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "unique_orders",
+        "slug" : "unique_orders",
+        "x" : -480,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Removes duplicate orders to ensure each order is counted only once.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1D0UVLnLk1m523cWljRft$$SaDh0QcuvQtd7TufVHRTZ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each order placed by a customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of units of the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the order for the specified product and quantity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the order was placed.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "src_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the source file from which the order data was loaded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "In1DidmCaIddRwrvbFb8t$$00Zo1CKJ_ttUrplIHFOEC",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ {
+          "colName" : "order_id"
+        } ],
+        "dedupType" : "any",
+        "columnsSelector" : [ "1D0UVLnLk1m523cWljRft$$SaDh0QcuvQtd7TufVHRTZ##order_id" ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Deduplicate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "tNNaazpetqAPdTjXkV1K9$$ct44A05Jnci2crgm3XaFo" : {
+      "id" : "tNNaazpetqAPdTjXkV1K9$$ct44A05Jnci2crgm3XaFo",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "standardize_order_fields",
+        "slug" : "standardize_order_fields",
+        "x" : -80,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Cleans and standardizes order data fields to improve data quality and consistency for business reporting and analysis.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sIFHUCq33W4CY6mPWoK_p$$bQwNxRYb3NEY5vURhkZf4",
+          "slug" : "df",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each order placed by a customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of units of the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the order for the specified product and quantity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the order was placed.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "src_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the source file from which the order data was loaded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address used by the customer for communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the customer is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current state of the customer record, such as active or inactive.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the customer record was created or updated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "0b1Y5dK21qR0jOEW41bv1$$hls82XYZITNKg6yA2IRqJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "trimWhiteSpace" : true,
+        "replaceNullForNumericFields" : false,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "NA",
+        "replaceNullTextFields" : false,
+        "columnNames" : [ "order_id", "customer_id", "product_id", "quantity", "amount", "order_ts", "src_file", "email", "country", "status", "ts" ],
+        "makeTitlecase" : false,
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "order_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier for each order placed by a customer.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "customer_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier for the customer who placed the order.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "product_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier for the product purchased in the order.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "quantity",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Number of units of the product purchased in the order.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "amount",
+            "type" : "double",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total monetary value of the order for the specified product and quantity.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "order_ts",
+            "type" : "timestamp",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Timestamp when the order was placed.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "src_file",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Name of the source file from which the order data was loaded.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Email address used by the customer for communication.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Country where the customer is located.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "status",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Current state of the customer record, such as active or inactive.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "ts",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Timestamp indicating when the customer record was created or updated.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "allWhiteSpace" : false,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : true,
+        "cleanPunctuations" : false,
+        "null_operation" : "keep_all",
+        "makeLowercase" : false,
+        "makeUppercase" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/DataCleansing",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "2zQxtRUMgttbUykxfcygn$$Cjk0S2pBT8T9ZNx8UMjmw" : {
+      "id" : "2zQxtRUMgttbUykxfcygn$$Cjk0S2pBT8T9ZNx8UMjmw",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "inner_join_on_customer_id",
+        "slug" : "inner_join_on_customer_id",
+        "x" : -280,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Combines order details with customer contact and status information for a complete view of each transaction.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each order placed by a customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of units of the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the order for the specified product and quantity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the order was placed.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "src_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the source file from which the order data was loaded.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to each customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address used by the customer for communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the customer is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current state of the customer record, such as active or inactive.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the customer record was created or updated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "src_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the source file from which the customer data was obtained.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "5BT4wDuhsSwF9DNMOMSnB$$xxmmakyNF5sBuwdouf_Ua",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.customer_id = in1.customer_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "order_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.order_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.customer_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "product_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.product_id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "quantity",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.quantity"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "amount",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.amount"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "order_ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.order_ts"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "src_file",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.src_file"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "email",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.email"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.country"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "status",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.status"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.ts"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##customer_id", "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs##customer_id", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##customer_id", "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs##status", "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs##email", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##src_file", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##order_id", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##amount", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##product_id", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##order_ts", "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs##country", "UWg0nBRFxdRPyKHFb8JQw$$XdMnvodj5gjtemNk9VZ4b##quantity", "EadrpJk10a7vOKn6QS41s$$RSlhxFFS7SvCkp2Ff3YBs##ts" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "5PlWDFpRU9kKjX3yJfGHU$$MGm6XQd8wmK9-aZNiixNN" : {
+      "id" : "5PlWDFpRU9kKjX3yJfGHU$$MGm6XQd8wmK9-aZNiixNN",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "silver_output",
+        "slug" : "silver_output",
+        "x" : 120,
+        "y" : -400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lWVwPBG1gUPcjs-P74fOA$$6b6cpNwvGTbdt7bnXxLoW",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "product_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "quantity",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Number of units of the product purchased in the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the order for the specified product and quantity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the order was placed.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "src_file",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/silver_output"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

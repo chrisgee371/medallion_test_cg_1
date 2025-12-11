@@ -1,0 +1,155 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: ingest_date
+    type: date
+    nullable: true
+    metadata:
+      description: Date when the event data was loaded into the system.
+      mappings: []
+      tags: []
+  - name: ingest_ts
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Exact timestamp when the event data was ingested.
+      mappings: []
+      tags: []
+  - name: source_file
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the file from which the event data was sourced.
+      mappings: []
+      tags: []
+  - name: row_in_file
+    type: integer
+    nullable: true
+    metadata:
+      description: Row number of the event within the source file.
+      mappings: []
+      tags: []
+  - name: event_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the event.
+      mappings: []
+      tags: []
+  - name: event_ts_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Original timestamp when the event occurred, as captured from the
+        source.
+      mappings: []
+      tags: []
+  - name: order_id_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Original order identifier as received from the source system.
+      mappings: []
+      tags: []
+  - name: customer_id_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Original customer identifier as provided in the source data.
+      mappings: []
+      tags: []
+  - name: product_id_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Original product identifier as recorded in the source data.
+      mappings: []
+      tags: []
+  - name: store_id_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Original store identifier from the source system.
+      mappings: []
+      tags: []
+  - name: channel_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Sales channel through which the transaction was made.
+      mappings: []
+      tags: []
+  - name: country_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Country where the transaction took place.
+      mappings: []
+      tags: []
+  - name: city_raw
+    type: string
+    nullable: true
+    metadata:
+      description: City where the transaction occurred.
+      mappings: []
+      tags: []
+  - name: quantity_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Number of units purchased in the transaction.
+      mappings: []
+      tags: []
+  - name: unit_price_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Price per unit of the product sold in the transaction.
+      mappings: []
+      tags: []
+  - name: discount_pct_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Discount percentage applied to the transaction as originally recorded.
+      mappings: []
+      tags: []
+  - name: currency_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Currency used in the transaction as captured in the raw data.
+      mappings: []
+      tags: []
+  - name: payment_method_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Payment method chosen by the customer in the original transaction
+        record.
+      mappings: []
+      tags: []
+  - name: status_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Current state of the transaction as recorded in the raw data.
+      mappings: []
+      tags: []
+  - name: notes_raw
+    type: string
+    nullable: true
+    metadata:
+      description: Additional remarks or comments related to the transaction as captured
+        in the raw data.
+      mappings: []
+      tags: []
+  - name: raw_payload
+    type: string
+    nullable: true
+    metadata:
+      description: Complete unprocessed data received for the transaction, often in
+        JSON or text format.
+      mappings: []
+      tags: []
