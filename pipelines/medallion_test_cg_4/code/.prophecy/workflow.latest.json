@@ -143,7 +143,7 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : -200,
+        "x" : -260,
         "y" : -260,
         "phase" : 0,
         "cache" : false,
@@ -1351,7 +1351,7 @@
       "metadata" : {
         "label" : "gold_retail_events",
         "slug" : "gold_retail_events",
-        "x" : 80,
+        "x" : 20,
         "y" : -260,
         "phase" : 0,
         "cache" : false,
