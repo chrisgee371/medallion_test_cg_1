@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances.medallion_test_cg_3' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==2.1.5'],
+'prophecy-libs==2.1.7'],
     entry_points = {
 'console_scripts' : [
 'main = medallion_test_cg_3.pipeline:main'], },

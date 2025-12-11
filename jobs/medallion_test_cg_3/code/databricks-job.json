@@ -34,7 +34,7 @@
           "spark.prophecy.metadata.is.interactive.run" : "false",
           "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
           "spark.prophecy.metadata.user.id" : "11398",
-          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKtWCsgsSM3JzEuNN1CyUiqAcor1c1NTEnNyMvPz4ktSi0vik9PjjZV0EIoNgYqVagEfbZU0PgAAAA==",
+          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKtWCsgsSM3JzEuNN1CyUiqAcor1c1NTEnNyMvPz4ktSi0vik9PjjZV0EIoNCSg2UaoFADTkMeNbAAAA",
           "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
           "spark.prophecy.execution.metrics.disabled" : "true",
@@ -65,11 +65,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.14.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.15.1"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==2.1.5"
+          "package" : "prophecy-libs==2.1.7"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy_artefacts//prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/medallion_test_cg_3-1.0-py3-none-any.whl"
@@ -90,11 +90,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.14.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.15.1"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==2.1.5"
+          "package" : "prophecy-libs==2.1.7"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy_artefacts//prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/medallion_test_cg_4-1.0-py3-none-any.whl"
@@ -109,6 +109,6 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_14794",
-  "sorted_processes" : [ "WP3BES-mgw9limQSFn-S4$$aBVcRveg8K9WNsMVKo1g1", "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH" ],
+  "sorted_processes" : [ "WP3BES-mgw9limQSFn-S4$$aBVcRveg8K9WNsMVKo1g1", "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH", "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE" ],
   "is_prophecy_managed_fabric" : false
 }

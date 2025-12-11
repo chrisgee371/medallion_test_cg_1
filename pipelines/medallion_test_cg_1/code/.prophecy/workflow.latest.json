@@ -8,8 +8,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.14.0",
-        "pyPiVersion" : "2.1.5"
+        "mavenVersion" : "8.15.1",
+        "pyPiVersion" : "2.1.7"
       },
       "sparkConfigJinjaEnabled" : true,
       "workflowMode" : "batch"

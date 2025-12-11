@@ -156,57 +156,6 @@
         "forEachIterationCount" : null
       },
       "parent" : null
-    },
-    "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE" : {
-      "id" : "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE",
-      "component" : "RunJob",
-      "metadata" : {
-        "label" : "RunJob_1",
-        "slug" : "RunJob_1",
-        "x" : -260,
-        "y" : -300
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "glvK6uRU6Q7B9bBHftCkT$$5RlG4xiuI34WOesDFL47s",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "mDk6r4GQjtT4O9lIaqeyr$$Uya_0ZNRGm1dsngsXAc8K",
-          "slug" : ""
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false,
-          "onDurationWarningThresholdExceeded" : false
-        },
-        "emails" : "",
-        "onStart" : false,
-        "onSuccess" : false,
-        "onFailure" : false,
-        "onDurationWarningThresholdExceeded" : false
-      },
-      "properties" : {
-        "timeoutSeconds" : 3600,
-        "jobSelectionMode" : "dropdown",
-        "selectedJobId" : "",
-        "manualJobId" : "",
-        "waitForCompletion" : true
-      },
-      "conditional" : {
-        "runIf" : "ALL_SUCCESS",
-        "forEach" : false,
-        "forEachConfig" : "",
-        "forEachConcurrency" : 1,
-        "forEachInputVariable" : "",
-        "forEachIterationCount" : null
-      },
-      "parent" : null
     }
   },
   "connections" : [ {
@@ -215,11 +164,5 @@
     "target" : "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH",
     "sourcePort" : "29NnmAG2XRvl4vE5YfiwT$$fa20RvUd7sRsjsx9GPRjy",
     "targetPort" : "6EXhJI5BmauTNOsGTxYRD$$7xUJcgpvP0I6jugEgWzJr"
-  }, {
-    "id" : "HqXUOg7FwucHqOocvzPHy",
-    "source" : "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH",
-    "target" : "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE",
-    "sourcePort" : "93Cc8jcgUY-l_Nvg7LjHY$$6pf8dgTJzxi4gHNMvqGeT",
-    "targetPort" : "glvK6uRU6Q7B9bBHftCkT$$5RlG4xiuI34WOesDFL47s"
   } ]
 }
