@@ -1,6 +1,6 @@
 name: medallion_test_cg_1
 description: ''
-version: 0.0.2
+version: 0.0.3
 author: gee.chris@prophecy.io
 language: python
 buildSystem: ''
