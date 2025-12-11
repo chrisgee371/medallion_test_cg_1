@@ -176,7 +176,34 @@ datasets:
         author: gee.chris@prophecy.io
         createdAt: '2025-12-11 12:44:26'
 templates: {}
-jobs: {}
+jobs:
+  jobs/medallion_test_cg_3:
+    name: medallion_test_cg_3
+    description: ''
+    fabricUID: 35322
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/medallion_test_cg_3
+    - pipelines/medallion_test_cg_4
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2025-12-11 12:56:18'
+    author: gee.chris@prophecy.io
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0

@@ -1,0 +1,225 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "35322",
+    "jobId" : "jobs/medallion_test_cg_3",
+    "name" : "medallion_test_cg_3",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    }
+  },
+  "processes" : {
+    "WP3BES-mgw9limQSFn-S4$$aBVcRveg8K9WNsMVKo1g1" : {
+      "id" : "WP3BES-mgw9limQSFn-S4$$aBVcRveg8K9WNsMVKo1g1",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : -656.4000244140625,
+        "y" : -319.79998779296875
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gpoLzK3xC8B7hfLVKTtC-$$XMkMBKpXUXwHlMOo9Ywsv",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "29NnmAG2XRvl4vE5YfiwT$$fa20RvUd7sRsjsx9GPRjy",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/medallion_test_cg_3",
+        "configurations" : {
+          "selectedInstance" : "default",
+          "instances" : {
+            "medallion_test_cg_1" : [ "default" ]
+          },
+          "overrides" : { },
+          "schema" : [ ]
+        },
+        "projectId" : "95785"
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
+    },
+    "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH" : {
+      "id" : "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_1",
+        "slug" : "Pipeline_1",
+        "x" : -460,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6EXhJI5BmauTNOsGTxYRD$$7xUJcgpvP0I6jugEgWzJr",
+          "slug" : "Pipeline_0"
+        } ],
+        "outputs" : [ {
+          "id" : "93Cc8jcgUY-l_Nvg7LjHY$$6pf8dgTJzxi4gHNMvqGeT",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/medallion_test_cg_4",
+        "configurations" : {
+          "selectedInstance" : "default",
+          "instances" : {
+            "medallion_test_cg_1" : [ "default" ]
+          },
+          "overrides" : { },
+          "schema" : [ {
+            "name" : "Subgraph_1",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ]
+        },
+        "projectId" : "95785"
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
+    },
+    "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE" : {
+      "id" : "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE",
+      "component" : "RunJob",
+      "metadata" : {
+        "label" : "RunJob_1",
+        "slug" : "RunJob_1",
+        "x" : -260,
+        "y" : -300
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "glvK6uRU6Q7B9bBHftCkT$$5RlG4xiuI34WOesDFL47s",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "mDk6r4GQjtT4O9lIaqeyr$$Uya_0ZNRGm1dsngsXAc8K",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "properties" : {
+        "timeoutSeconds" : 3600,
+        "jobSelectionMode" : "dropdown",
+        "selectedJobId" : "",
+        "manualJobId" : "",
+        "waitForCompletion" : true
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
+    }
+  },
+  "connections" : [ {
+    "id" : "Y4hvJvv45tbvlUD2PSM14$$hGW7Y4kjHjS9JsMn7izOu",
+    "source" : "WP3BES-mgw9limQSFn-S4$$aBVcRveg8K9WNsMVKo1g1",
+    "target" : "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH",
+    "sourcePort" : "29NnmAG2XRvl4vE5YfiwT$$fa20RvUd7sRsjsx9GPRjy",
+    "targetPort" : "6EXhJI5BmauTNOsGTxYRD$$7xUJcgpvP0I6jugEgWzJr"
+  }, {
+    "id" : "HqXUOg7FwucHqOocvzPHy",
+    "source" : "TXdDiTdWROa2WVPQ_bSpB$$zHA6BKQOWElkYrcwEF7qH",
+    "target" : "wjmgqNScn7QgQwHmshpan$$UfaCarQd2cqMDN6W2AxGE",
+    "sourcePort" : "93Cc8jcgUY-l_Nvg7LjHY$$6pf8dgTJzxi4gHNMvqGeT",
+    "targetPort" : "glvK6uRU6Q7B9bBHftCkT$$5RlG4xiuI34WOesDFL47s"
+  } ]
+}
